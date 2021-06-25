@@ -13,7 +13,7 @@ export function deactivate() {}
 
 function appendComma() {
   const textEditor = vscode.window.activeTextEditor;
-  const cursorPosition = textEditor.selection.active;
+  const cursorPosition = textEditor.selection;
   const line = textEditor.document.lineAt(cursorPosition);
 
   if (line.text[line.text.length - 1] === ',') {
